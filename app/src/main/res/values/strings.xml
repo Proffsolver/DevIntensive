@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DevIntensive</string>
+
+    <!-- Error message -->
+    <string name="error.message.network">Network error</string>
+    <string name="error.message.call">Call fialed</string>
+    <string name="error.message.map">Map loading failed</string>
 </resources>
