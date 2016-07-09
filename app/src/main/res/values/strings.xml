@@ -5,5 +5,11 @@
     <string name="error.message.network">Network error</string>
     <string name="error.message.call">Call fialed</string>
     <string name="error.message.map">Map loading failed</string>
+    <string name="user_profile.placeholder.image">Изменить фотографию профиля</string>
+    <string name="user_profile_dialog_gallery">загрузить из галереи</string>
+    <string name="user_profile_dialog_camera">Сделать снимок</string>
+    <string name="user_profile_dialog_cancel">Отмена</string>
+    <string name="user_profile_dialog_title">Изменить фотографию профиля</string>
+    <string name="user_profile_choose_message">Выберите фото</string>
 
 </resources>
