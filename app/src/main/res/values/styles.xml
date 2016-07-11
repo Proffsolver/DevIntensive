@@ -31,6 +31,10 @@
         <item name="android:layout_marginTop">@dimen/spacing_medial_24</item>
         <item name="android:layout_marginRight">@dimen/spacing_medium_32</item>
     </style>
+    <style name="fabmargin">
+        <item name="android:layout_marginLeft">290dp</item>
+        <item name="android:layout_marginTop">190dp</item>
+    </style>
     <style name="allmargin">
         <item name="android:layout_marginTop">@dimen/spacing_medial_24</item>
         <item name="android:layout_marginLeft">@dimen/spacing_medial_24</item>

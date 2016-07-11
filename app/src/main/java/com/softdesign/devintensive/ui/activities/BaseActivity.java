@@ -3,6 +3,8 @@ package com.softdesign.devintensive.ui.activities;
 import android.app.ProgressDialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
@@ -13,6 +15,7 @@ import com.softdesign.devintensive.utils.ConstantManager;
 public class BaseActivity extends AppCompatActivity{
     static final String TAG = ConstantManager.TAG_PREFIX+"BaseActivity";
     protected ProgressDialog mProgressDialog;
+    protected Handler mHandler;
 
     public void showProgress(){
         if (mProgressDialog==null) {
@@ -41,5 +44,38 @@ public class BaseActivity extends AppCompatActivity{
     }
     public void showToast(String message){
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+    }
+
+    public void runWithDelay(){
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {hideProgress();}}, 5000);
+    }
+
+    public void progressBarSendMail(){
+        mProgressDialog = new ProgressDialog(this);
+        mProgressDialog.setTitle("Отпавка mail...");
+        mProgressDialog.setMessage("Ваше письмо отправляется подождите до окончания процесса.");
+        // меняем стиль на индикатор
+        mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        // устанавливаем максимум
+        mProgressDialog.setMax(1000);
+        // включаем анимацию ожидания
+        mProgressDialog.setIndeterminate(true);
+        mProgressDialog.show();
+        mHandler = new Handler() {
+            public void handleMessage(Message msg) {
+                // выключаем анимацию ожидания
+                mProgressDialog.setIndeterminate(false);
+                if (mProgressDialog.getProgress() < mProgressDialog.getMax()) {
+                    // увеличиваем значения индикаторов
+                    mProgressDialog.incrementProgressBy(50);
+                    mProgressDialog.incrementSecondaryProgressBy(75);
+                    mHandler.sendEmptyMessageDelayed(0, 100);
+                } else { mProgressDialog.dismiss(); }
+            }
+        };
+        mHandler.sendEmptyMessageDelayed(0, 2000);
     }
 }
