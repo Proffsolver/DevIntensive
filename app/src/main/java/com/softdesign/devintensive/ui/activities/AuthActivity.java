@@ -187,14 +187,14 @@ public class AuthActivity extends BaseActivity implements View.OnClickListener {
             //close the output stream when complete //
             fileOutput.close();
         } catch (final MalformedURLException e) {
-            showError("Error : MalformedURLException " + e);
+            showError("Ошибка : MalformedURLException " + e);
             e.printStackTrace();
         } catch (final IOException e) {
-            showError("Error : IOException " + e);
+            showError("Ошибка : IOException " + e);
             e.printStackTrace();
         }
         catch (final Exception e) {
-            showError("Error : Please check your internet connection " + e);
+            showError("Ошибка: проверьте подключение к интернету " + e);
         }
     }
 }
