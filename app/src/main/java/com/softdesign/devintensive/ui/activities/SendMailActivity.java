@@ -45,7 +45,7 @@ public class SendMailActivity extends BaseActivity {
                 SendMailActivity.this.onBackPressed();
 //                 progressBarSendMail();
 //                SendMailActivity.this.startActivity(Intent.createChooser(emailIntent,"Отправка письма..."));
-             }
+            }
         });
     }
 }
