@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_big_72">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/spacing_larger_72"
+        android:layout_centerVertical="true">
+        <EditText
+            android:id="@+id/gitrepo_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textUri"
+            android:textSize="@dimen/font_normal_15"
+            android:hint="Репозиторий"
+            android:text="github.com\\Proffsolver\\DevIntensive"
+            android:enabled="false"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:focusable="false"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        style="@style/icon.right"
+        android:id="@+id/git_img"
+        android:src="@drawable/ic_visibility_black_24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

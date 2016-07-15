@@ -11,76 +11,92 @@ import java.util.List;
 public class UserModelRes {
     @SerializedName("success")
     @Expose
-    public boolean success;
+    private boolean success;
     @SerializedName("data")
     @Expose
-    public Data data;
-
-    public Data getData(){
+    private Data data;
+    public Data getData() {
         return data;
     }
+
 
     public class User{
         @SerializedName("_id")
         @Expose
-        public String id;
+        private String id;
         @SerializedName("first_name")
         @Expose
-        public String firstName;
+        private String firstName;
         @SerializedName("second_name")
         @Expose
-        public String secondName;
+        private String secondName;
         @SerializedName("__v")
         @Expose
-        public int v;
+        private int v;
         @SerializedName("repositories")
         @Expose
-        public Repositories repositories;
+        private Repositories repositories;
         @SerializedName("contacts")
         @Expose
-        public Contacts contacts;
+        private Contacts contacts;
         @SerializedName("profileValues")
         @Expose
-        public ProfileValues profileValues;
+        private ProfileValues profileValues;
         @SerializedName("publicInfo")
         @Expose
-        public PublicInfo publicInfo;
+        private PublicInfo publicInfo;
         @SerializedName("specialization")
         @Expose
-        public String specialization;
+        private String specialization;
         @SerializedName("role")
         @Expose
-        public String role;
+        private String role;
         @SerializedName("updated")
         @Expose
-        public String updated;
+        private String updated;
+
+        public Repositories getRepositories() {
+            return repositories;
+        }
+
+        public ProfileValues getProfileValues() {
+            return profileValues;
+        }
+
+        public PublicInfo getPublicInfo() {
+            return publicInfo;
+        }
+
+        public String getFullName() {
+            return firstName + " " + secondName;
+        }
 
         public String getId(){
             return id;
         }
-
-        public ProfileValues getProfileValues(){
-            return profileValues;
-        }
-
+       // public ProfileValues getProfileValues(){
+       //     return profileValues;
+      //  }
         public Contacts getContacts() { return contacts; }
-
-        public PublicInfo getPublicInfo() {return publicInfo;}
-
-        public String getGit() { return getGit(); }
-
+      //  public Repositories getRepositories() { return Repositories;}
+      //  public PublicInfo getPublicInfo() {return publicInfo;}
         public String getFirstName() {return firstName; }
         public String getSecondName() {return secondName; }
     }
 
-    public class Repositories{
+    public class Repositories {
         @SerializedName("repo")
         @Expose
         public List<Repo> repo = new ArrayList<Repo>();
         @SerializedName("updated")
         @Expose
         public String updated;
+
+        public List<Repo> getRepo() {
+            return repo;
+        }
     }
+
 
     public class Repo {
         @SerializedName("_id")
@@ -93,7 +109,9 @@ public class UserModelRes {
         @Expose
         public String title;
 
-        public String getGit() { return git;}
+        public String getGit() {
+            return git;
+        }
     }
 
     public class PublicInfo {

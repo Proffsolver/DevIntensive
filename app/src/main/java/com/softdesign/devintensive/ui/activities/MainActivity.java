@@ -128,7 +128,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mUserInfoViews.add(mUserPhone);
         mUserInfoViews.add(mUserMail);
         mUserInfoViews.add(mUserVk);
-        mUserInfoViews.add(mUserGit);
+   //     mUserInfoViews.add(mUserGit);
         mUserInfoViews.add(mUserBio);
 
         mUserValueViews = new ArrayList<>();
