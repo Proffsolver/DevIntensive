@@ -21,4 +21,6 @@
     <string name="auth.login">Войти</string>
     <string name="auth.remember">Забыли пароль?</string>
 
+    <string name="profile.bio.dummy">Bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla</string>
+
 </resources>

@@ -135,7 +135,7 @@ public class AuthActivity extends BaseActivity implements View.OnClickListener {
         userFields.add(userModel.getData().getUser().getContacts().getPhone());
         userFields.add(userModel.getData().getUser().getContacts().getEmail());
         userFields.add(userModel.getData().getUser().getContacts().getVk());
-        userFields.add(userModel.getData().getUser().getGit());
+        userFields.add(userModel.getData().getUser().getRepositories().getRepo().get(0).getGit());
         userFields.add(userModel.getData().getUser().getPublicInfo().getBio());
         mDataManager.getPreferencesManager().saveUserProfileData(userFields);
     }
@@ -148,10 +148,10 @@ public class AuthActivity extends BaseActivity implements View.OnClickListener {
     }
 
     void saveUserPhotos(UserModelRes userModel){
-        URL urlAva = new URL(userModel.getData().getUser().getPublicInfo().getAvatar());
-        downloadFile(urlAva, "avatar");
-        URL urlPho = new URL(userModel.getData().getUser().getPublicInfo().getPhoto());
-        downloadFile(urlPho, "user_photo");
+     //   URL urlAva = new URL(userModel.getData().getUser().getPublicInfo().getAvatar());
+     //   downloadFile(urlAva, "avatar");
+    //    URL urlPho = new URL(userModel.getData().getUser().getPublicInfo().getPhoto());
+    //    downloadFile(urlPho, "user_photo");
 
     }
 
@@ -186,15 +186,9 @@ public class AuthActivity extends BaseActivity implements View.OnClickListener {
             }
             //close the output stream when complete //
             fileOutput.close();
-        } catch (final MalformedURLException e) {
-            showError("Ошибка : MalformedURLException " + e);
-            e.printStackTrace();
-        } catch (final IOException e) {
-            showError("Ошибка : IOException " + e);
-            e.printStackTrace();
         }
         catch (final Exception e) {
-            showError("Ошибка: проверьте подключение к интернету " + e);
+         //   showError("Ошибка: проверьте подключение к интернету " + e);
         }
     }
 }
