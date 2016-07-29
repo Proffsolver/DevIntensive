@@ -24,11 +24,11 @@ public class PreferencesManager {
     private static final String[] USER_VALUES = {
             ConstantManager.USER_RATING_VALUE,
             ConstantManager.USER_CODE_LINES_VALUE,
-            ConstantManager.USER_PROJECT_VALUE    };
+            ConstantManager.USER_PROJECT_VALUE};
 
     private static final String[] USER_NAMES = {
             ConstantManager.USER_FIRSTNAME_KEY,
-            ConstantManager.USER_SECONDNAME_KEY    };
+            ConstantManager.USER_SECONDNAME_KEY};
 
     public PreferencesManager() {
         this.mSharedPreferences = DevintensiveApplication.getSharedPreferences();
@@ -45,11 +45,9 @@ public class PreferencesManager {
 
     public List<String> loadUserProfileData(){
         List<String> userFields = new ArrayList<>();
-        userFields.add(mSharedPreferences.getString(ConstantManager.USER_PHONE_KEY, "null"));
-        userFields.add(mSharedPreferences.getString(ConstantManager.USER_MAIL_KEY, "null"));
-        userFields.add(mSharedPreferences.getString(ConstantManager.USER_VK_KEY, "null"));
-        userFields.add(mSharedPreferences.getString(ConstantManager.USER_GIT_KEY, "null"));
-        userFields.add(mSharedPreferences.getString(ConstantManager.USER_BIO_KEY, "null"));
+        for (int i = 0; i < USER_FIELDS.length; ++i) {
+            userFields.add(mSharedPreferences.getString(USER_FIELDS[i], ""));
+            }
         return userFields;
 
     }
@@ -78,10 +76,9 @@ public class PreferencesManager {
 
     public List<String> loadUserProfileValues(){
         List<String> userValues = new ArrayList<>();
-        userValues.add(mSharedPreferences.getString(ConstantManager.USER_RATING_VALUE, "0"));
-        userValues.add(mSharedPreferences.getString(ConstantManager.USER_CODE_LINES_VALUE, "0"));
-        userValues.add(mSharedPreferences.getString(ConstantManager.USER_PROJECT_VALUE, "0"));
-
+        for (int i = 0; i < USER_VALUES.length; ++i) {
+            userValues.add(mSharedPreferences.getString(USER_VALUES[i], "0"));
+        }
         return userValues;
     }
 

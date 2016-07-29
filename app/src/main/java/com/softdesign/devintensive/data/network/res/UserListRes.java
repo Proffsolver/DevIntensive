@@ -72,10 +72,8 @@ public class UserListRes {
                 return firstName + " " + secondName;
             }
 
-        /*     public String getId(){
-            return id;
-        }
-        public ProfileValues getProfileValues(){
+            public String getId(){ return id;}
+     /*   public ProfileValues getProfileValues(){
             return profileValues;
         }
         public Contacts getContacts() { return contacts; }
@@ -112,6 +110,7 @@ public class UserListRes {
                 return git;
             }
 
+            public String getId() { return id; }
         }
 
         public class PublicInfo {
@@ -131,6 +130,10 @@ public class UserListRes {
             public String getBio() { return bio; }
             public String getAvatar() { return avatar;}
             public String getPhoto() { return photo;}
+
+            public void setPhoto(String photo) {
+                this.photo = photo;
+            }
         }
 
         public class ProfileValues{

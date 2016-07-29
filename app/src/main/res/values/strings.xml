@@ -22,5 +22,9 @@
     <string name="auth.remember">Забыли пароль?</string>
 
     <string name="profile.bio.dummy">Bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla</string>
+    <string name="error_input_mail_message">Введенный Email не соответствует критериям ввода, измените значение и повторите снова</string>
+    <string name="error_input_vk_message">Введенный vk профиль не соответствует критериям, измените значение и повторите снова.</string>
+    <string name="error_input_github_message">Введенный github профиль не соответствует критериям, измените значение и повторите снова.</string>
+    <string name="error_input_phone_number">\"Введенный номер не соответствует формату ввода.</string>
 
 </resources>

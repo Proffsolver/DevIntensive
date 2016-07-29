@@ -88,8 +88,8 @@ public class ProfileUserActivity extends AppCompatActivity {
 
         Picasso.with(this)
                 .load(userDTO.getPhoto())
-                .placeholder(R.drawable.header_bg)
-                .error(R.drawable.header_bg)
+                .placeholder(R.drawable.user_bg)
+                .error(R.drawable.user_bg)
                 .into(mProfileImage);
     }
 }

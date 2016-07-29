@@ -45,7 +45,7 @@
                 style="@style/icon.left"
                 android:src="@drawable/ic_description_black_24dp"/>
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="@dimen/size_big_72"
                 android:layout_weight="1"
                 android:orientation="vertical"
@@ -71,10 +71,8 @@
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
         </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/line_size"
-            android:background="@color/grey_light"
-            android:layout_marginLeft="@dimen/spacing_larger_72"/>
+        <ImageView
+            style="@style/icon.right"
+            android:src="@drawable/ic_visibility_black_24dp"/>
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

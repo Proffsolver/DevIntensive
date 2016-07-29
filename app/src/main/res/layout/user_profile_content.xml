@@ -37,7 +37,7 @@
                         android:textSize="@dimen/font_normal_15"
                         android:inputType="phone"
                         android:hint="Мобильный телефон"
-                        android:text="+7(916)987-03-50"
+                        android:text=""
                         android:enabled="false"
                         android:textColor="@color/black"
                         android:textColorHint="@color/grey"
@@ -78,12 +78,12 @@
                         android:id="@+id/email_et"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textEmailAddress"
                         android:textSize="@dimen/font_normal_15"
                         android:hint="E-mail"
                         android:text="serebrennikov.evgeniy@gmail.com"
-                        android:enabled="false"
                         android:textColor="@color/black"
+                        android:enabled="false"
+                        android:inputType="textEmailAddress"
                         android:textColorHint="@color/grey"
                         android:focusable="false"/>
                 </android.support.design.widget.TextInputLayout>
